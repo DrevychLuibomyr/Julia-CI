@@ -4,4 +4,5 @@ before_install:
     - sudo apt-get update -qq -y
     - sudo apt-get install git libpcre3-dev julia -y
 script:
-    - julia ./proc.jl
+    - julia -e 'versioninfo(); Pkg.init();'
+    - julia -e 'println("success!")'
